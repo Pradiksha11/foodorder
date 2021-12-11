@@ -6,7 +6,7 @@ const MealItem = (props) => {
   const price = `$${props.price.toFixed(3)}`;
   return (
     <>
-    <li className={style.meal}>
+     <li className={style.meal}>  {/*yahape AvailableMeal.js component se data aya hai */}
       <div>
        <h2> {props.name} </h2>
        <div className={style.description}> {props.description} </div>

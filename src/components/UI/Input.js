@@ -8,7 +8,6 @@ const Input = (props) => {
      <label > {props.label} </label>
      <input {...props.input} />
      </div>
-
     </>
   )
 }
