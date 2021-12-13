@@ -1,32 +1,29 @@
+import React, { useState } from "react";
 import './App.css';
 import Header from './components/layout/Header';
 import AvailableMeal from './components/Meals/AvailableMeal';
 import Cart from './components/cart/Cart';
+import CartProvider from './components/Store/CartProvider';
 
 const App = () => {
+
+  const [cartHandler, setCartHandler] = useState(false);
+
+  const openCartHandler = () => {
+    setCartHandler(true);
+  }
+  const closeCartHandler = () => {
+    setCartHandler(false);
+  }
+
   return (
-    <div className="App">
-    <Header />
-    <Cart />
+    <CartProvider className="App">
+   <Header onOpen={openCartHandler} />
+    {cartHandler && <Cart onClose={closeCartHandler} />}
     <main>
     <AvailableMeal />
     </main>
-  
-    {/*  <header>
-         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> 
-      </header>*/}
-    </div>
+   </CartProvider>
   );
 }
 

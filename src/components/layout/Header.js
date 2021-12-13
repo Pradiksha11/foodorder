@@ -3,12 +3,12 @@ import meal from '../../assets/meals.jpg';
 import style from './Header.module.css';
 import HeaderCartButton from '../layout/HeaderCartButton';
 
-function Header() {
+const Header = (props) => {
   return (
     <>
       <header className={style.header}>
         <h1>React Meal</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onOpen} />
         </header>
       <div className={style['main-image']}>
       <img src={meal} alt="meal"/>
@@ -17,4 +17,4 @@ function Header() {
   )
 };
 
-export default Header
+export default Header;
