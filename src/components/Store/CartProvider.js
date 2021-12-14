@@ -1,17 +1,21 @@
-import React from 'react'
-import CartContext from './CartContext';
+import React from 'react';
+import CartContext from './Context';
+
+// const CartContext = createContext({
+ 
+// });
 
 const CartProvider = (props) => {
 
   const addItemToCartHandler = props => {};
   const removeItemToCartHandler = props => {};
 
-    const cartContext = () => {
-    items: [];
+  const cartContext = {
+    items: [],
     totalAmount: 0,
-    addItems = {addItemToCartHandler},
-    removeItem = {removeItemToCartHandler}
-  }
+    addItem : addItemToCartHandler,
+    removeItem : removeItemToCartHandler
+  };
 
   return (
     <CartContext.Provider value={cartContext}>
@@ -20,4 +24,6 @@ const CartProvider = (props) => {
   )
 };
 
+// eslint-disable-next-line
+{/* <CartProvider> ye app.js me wrap kiya hai  */}
 export default CartProvider;

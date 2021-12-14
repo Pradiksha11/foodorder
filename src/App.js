@@ -5,7 +5,7 @@ import AvailableMeal from './components/Meals/AvailableMeal';
 import Cart from './components/cart/Cart';
 import CartProvider from './components/Store/CartProvider';
 
-const App = () => {
+const App = (props) => {
 
   const [cartHandler, setCartHandler] = useState(false);
 
@@ -17,14 +17,14 @@ const App = () => {
   }
 
   return (
-    <CartProvider className="App">
-   <Header onOpen={openCartHandler} />
+    <CartProvider>
     {cartHandler && <Cart onClose={closeCartHandler} />}
+    <Header onOpen={openCartHandler} />
     <main>
     <AvailableMeal />
     </main>
    </CartProvider>
-  );
-}
+  )
+  };
 
 export default App;
