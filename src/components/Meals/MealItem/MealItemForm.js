@@ -16,11 +16,11 @@ const MealItemForm = (props) => {
           step: '1',
           defaultValue: '1'
         }}
-        />
+        />             {/*yahape Input.js component import karke usme value pass kiya hai */}
         <button>+Add</button>
       </form>
     </>
   )
 }
 
-export default MealItemForm
+export default MealItemForm;
