@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import style from './MealItemForm.module.css';
 import Input from '../../UI/Input';
 
 const MealItemForm = (props) => {
 
+  const amountInputRef =useRef();
+  const [isvalid, setIsValid] = useState(false)
+
   const submitHandler = event => {
     event.preventDefault();
+  
+  const enteredAmount = amountInputRef.current.value;
+  const enteredAmountNumber = +enteredAmount;
 
-  }
+  if(
+    enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 5) {
+      setIsValid(false);
+      return;
+    }
+    props.onAddToCart(enteredAmountNumber);
+  };
+  
 
   return (
     <>
       <form className={style.form} onSubmit={submitHandler}>
-        <Input 
+        <Input
+        ref={amountInputRef}
         label= 'Quantity'
         input={{
           id: 'amount' + props.id,
@@ -24,6 +38,7 @@ const MealItemForm = (props) => {
         }}
         />             {/*yahape Input.js component import karke usme value pass kiya hai */}
         <button>+Add</button>
+        {isvalid && <p>please enter valid amount till 1-5</p>}
       </form>
     </>
   )
