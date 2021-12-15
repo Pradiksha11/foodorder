@@ -3,9 +3,15 @@ import style from './MealItemForm.module.css';
 import Input from '../../UI/Input';
 
 const MealItemForm = (props) => {
+
+  const submitHandler = event => {
+    event.preventDefault();
+
+  }
+
   return (
     <>
-      <form className={style.form}>
+      <form className={style.form} onSubmit={submitHandler}>
         <Input 
         label= 'Quantity'
         input={{
