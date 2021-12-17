@@ -1,4 +1,4 @@
-# </> food-ordering-app
+# </> Food-Ordering-App
 ⭐ This project is made with ReactJS. <br>
 
 ## 🤝 Contributions
