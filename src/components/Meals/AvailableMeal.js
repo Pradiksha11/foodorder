@@ -11,7 +11,8 @@ const AvailableMeal = () => {
 useEffect(() => {
 const fetchMeals = async() => {
   // setIsLoading(true);
-  const response = await fetch('https://food-react-app-f2766-default-rtdb.firebaseio.com/meals.json');
+ // const response = await fetch('https://food-react-app-f2766-default-rtdb.firebaseio.com/meals.json');
+  const response = await fetch('https://food-app-peagy-default-rtdb.firebaseio.com/meals.json');
 
 //  if (!response.ok) {
 //   throw new Error ('Something went wrong!');
