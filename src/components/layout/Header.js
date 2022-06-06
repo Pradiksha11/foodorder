@@ -15,6 +15,7 @@ const Header = (props) => {
        <HeaderCartButton onClick={props.onOpen} />   {/* here (props.onOpen) value has came from App.js line-22 and again passed to lowest compon. HeaderCartButton line-15 */}
         </header>
       {/* <div className={style['main-image']}>
+      +
       <img src={meal} alt="meal"/>
       </div> */}
     </> 

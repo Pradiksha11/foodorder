@@ -5,7 +5,7 @@ import AvailableMeal from './components/Meals/AvailableMeal';
 import Cart from './components/cart/Cart';
 import CartProvider from './components/Store/CartProvider';
 
-const App = (props) => {
+const App = () => {
 
   const [cartHandler, setCartHandler] = useState(false);
 
@@ -25,6 +25,6 @@ const App = (props) => {
     </main>
    </CartProvider>
   )
-  };
+};
 
 export default App;
