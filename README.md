@@ -1,8 +1,8 @@
 # </> Food-Ordering-App
-⭐ This project is made with ReactJS. <br>
+⭐ This is Food-Ordering-App made with ReactJS. <br>
 
 ## 🤝 Contributions
-Task Manager is now open source anyone can contribute to this project, but there are several steps which needs to be followed by you. If you made up your mind to contribute then fork the repository and star it, and then follow the steps given below:  
+Food-Ordering-App is now open source anyone can contribute to this project, but there are several steps which needs to be followed by you. If you made up your mind to contribute then fork the repository and star it, and then follow the steps given below:  
 - Raise an Issue with proper title, description and label.
 - Wait for the project Coordinator to assign you the Issue.
 - Once Assigned work on it, and then Create the Pull Request.
