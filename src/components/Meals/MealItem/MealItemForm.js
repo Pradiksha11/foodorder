@@ -4,7 +4,7 @@ import Input from '../../UI/Input';
 
 const MealItemForm = (props) => {
 
-  const amountInputRef =useRef();
+  const amountInputRef = useRef();
   const [isvalid, setIsValid] = useState(false)
 
   const submitHandler = event => {
@@ -14,13 +14,14 @@ const MealItemForm = (props) => {
   const enteredAmountNumber = +enteredAmount;
 
   if(
-    enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 10) {
+     enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 10) {
       setIsValid(false);
       return;
     }
     props.onAddToCart(enteredAmountNumber);
+    // console.log(enteredAmount);
+    // console.log('add button is clicked');
   };
-  
 
   return (
     <>
